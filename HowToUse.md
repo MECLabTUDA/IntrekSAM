@@ -3,3 +3,4 @@
 # LEARNING CURVE
 </div>
 
+![flowchart](asset/flow_chart.png)

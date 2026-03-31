@@ -1,2 +1,5 @@
-<h1>LEARNING CURVE </h1> 
+<div id="top" align="center">
+
+LEARNING CURVE
+</div>
 

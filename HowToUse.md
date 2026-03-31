@@ -1,5 +1,5 @@
 <div id="top" align="center">
 
-LEARNING CURVE
+# LEARNING CURVE
 </div>
 

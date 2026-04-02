@@ -50,3 +50,47 @@ Follow these phases to generate high-fidelity ground truth masks. This workflow 
 3. **Iteration Check:** Once the sequence for the current tool is complete, determine if additional instruments (e.g., *Spatula*) require annotation.
    * **If Next Tool Exists:** Return to **Phase 1** to select the new tool label and begin its semantic seeding process.
 4. **Final Export:** After all instruments in the video have been accurately masked and verified, click **Export Annotations**.
+
+---
+
+# Best Practices for High-Fidelity Annotation
+
+To ensure the highest data quality across any visual domain, all annotators should adhere to these professional guidelines.
+
+---
+
+### 1. Geometric Precision (The "Initial Seed")
+* **Target the Active Region:** For elongated objects, prioritize placing points on the "active" or functional end. Avoid annotating static handles or base structures unless you would like to include entire tool in your mask.
+* **Edge Anchoring:** Do not place points only in the center of the object. Strategically place positive prompts near the physical boundaries. This helps the model lock onto the object's edges against complex backgrounds.
+* **The Rewind Rule:** Always initialize a new object by rewinding to the frame prior to its entry into the field of view. This provides a clean starting state for the model’s temporal memory.
+
+(place a short gif)
+
+---
+
+### 2. Managing Environmental Artifacts
+* **Negative Prompting for Specular Noise:** High-intensity lighting often creates glare on metallic or reflective surfaces. If a mask bleeds into a reflection, place **Negative Prompts** directly on the glare to force the mask back to the object’s physical boundary.
+* **Visual Interference:** Treat bubbles or fluid distortions as background noise. Use negative prompts to ensure the object mask does not expand into these transient visual artifacts.
+
+(place a short gif)
+
+---
+
+### 3. Occlusion & Boundary Protocol
+* **The "No-Guessing" Rule:** If an object passes behind another element or is partially obscured, **do not estimate its hidden position.** Annotate only the visually confirmed portion to prevent hallucinated data in the final dataset.
+* **Boundary Maintenance:** If an object leaves the field of view, immediately use `Clear Annotations` to stop tracking. This prevents phantom masks from sticking to the edges of the video frame and prevents model to hallucinate tool in other elements of the video.
+
+(place a short gif)
+
+---
+
+### 4. Temporal Verification & Drift Management
+* **Active Review:** Pay attention to the masks propagating through the video to identify any drifts in tracking and ensure mask accuracy. 
+* **The "First Frame" Correction:** At the **first frame of detected drift**, pause the video and correct the mask. Small errors compound quickly; fixing a minor drift early prevents a total tracking failure later in the sequence.
+
+---
+
+### 5. Multi-Object Strategy: Efficiency vs. Fidelity
+* **Sequential Pass (Recommended):** Fully annotate and verify Object A before starting Object B. This is the "Gold Standard" for ensuring the model's memory bank remains focused on a single semantic target.
+* **Simultaneous Pass (Advanced):** For clear sequences where objects remain physically separated, you may seed multiple objects at once by providing distinct positive and negative prompts for every active class before initiating propagation.
+    * **Warning:** If one object drifts, clearing annotations will wipe progress for *all* active objects in that pass. Use this only for high-quality, low-noise footage.

@@ -9,18 +9,23 @@ This guide provides the standard operating procedure for generating high-fidelit
 
 ## 🛠 Interface & Shortcut Reference
 
-| Button / Action | Function | Keyboard Shortcut |
+| Button / Element | Function | Shortcut |
 | :--- | :--- | :--- |
-| **Load Video** | Automatically fetches the next unannotated sequence from the dataset queue. | N/A |
-| **Load Video Frames** | Manual ingestion of a video file or a directory of extracted image frames. | N/A |
-| **Load Auto** | | |
-| **Load Next** | | |
-| **Play / Pause** | Toggles the SAM 2 propagation engine to start or stop tracking. | `middle mouse` |
-| **Undo Points** | Removes the most recently placed prompt on the current frame. | `Ctrl + Z` |
-| **Clear Annotations** | Flushes all predicted masks from the current frame to the end ($t \to \infty$). | `C` |
-| **Export Annotations** | Saves the session and generates RLE masks and Kinematic JSON data. | `Ctrl + S` |
-| **Taxonomy Sidebar** | Adds a **Positive Prompt** to include a region within the mask. | `Index number of the particular tool` |
-| **Frame Steppers** | Navigates the video timeline frame-by-frame for precise verification. | `Left / Right Arrows` |
+| **Canvas** | Interactive display area for video playback and for placing positive (Left-Click) and negative (Right-Click) prompts. | `Left/Right Click` |
+| **Load Video** | Opens a file browser to manually select and load a video file. | - |
+| **Load Video Frames** | Imports a sequence of pre-extracted images from a specified directory. Use it in case of long videos and limited resources. | - |
+| **Load Auto** | Automatically retrieves the next assigned video from the input directory. | - |
+| **Load Next** | Loads the next available video from the input directory. | - |
+| **Play / Pause** | Toggles the SAM 2 propagation engine to start or stop mask tracking. | `Middle Mouse` |
+| **Undo Points** | Removes the placed positive and negative prompts of the selected class on the current frame. | - |
+| **Clear Annotations** | Flushes all predicted and manual masks of all classes from the current frame to the end of the video. | - |
+| **Export Annotations** | Exports all masks generated in the current video to the output directory. | - |
+| **Taxonomy Sidebar** | List of selectable instrument classes (e.g., Spatula, Phaco Tip) used to label the active mask. | `[Id]` (e.g., `7`) |
+| **`<<` Button** | Steps the video backward by a single frame for precise alignment. | `Left Arrow` |
+| **`>>` Button** | Steps the video forward by a single frame for precise alignment. | `Right Arrow` |
+| **Frame Slider** | Allows for rapid scrubbing and navigation through the entire video duration. | - |
+| **Frame Counter** | Displays the current frame index relative to the total frame count of the video. | - |
+| **Status Update** | Console log providing real-time feedback on user actions and system coordinates. | - |
 
 ---
 

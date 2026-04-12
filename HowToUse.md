@@ -11,15 +11,16 @@ This guide provides the standard operating procedure for generating high-fidelit
 
 | Button / Action | Function | Keyboard Shortcut |
 | :--- | :--- | :--- |
-| **Load Auto** | Automatically fetches the next unannotated sequence from the dataset queue. | N/A |
-| **Load Video / Frames** | Manual ingestion of a video file or a directory of extracted image frames. | N/A |
-| **Left-Click** | Adds a **Positive Prompt** to include a region within the mask. | `Mouse 1` |
-| **Right-Click** | Adds a **Negative Prompt** to exclude reflections, noise, or background. | `Mouse 2` |
+| **Load Video** | Automatically fetches the next unannotated sequence from the dataset queue. | N/A |
+| **Load Video Frames** | Manual ingestion of a video file or a directory of extracted image frames. | N/A |
+| **Load Auto** | | |
+| **Load Next** | | |
+| **Play / Pause** | Toggles the SAM 2 propagation engine to start or stop tracking. | `middle mouse` |
 | **Undo Points** | Removes the most recently placed prompt on the current frame. | `Ctrl + Z` |
-| **Play / Pause** | Toggles the SAM 2 propagation engine to start or stop tracking. | `Space` |
-| **Frame Scrubbing** | Navigates the video timeline frame-by-frame for precise verification. | `Left / Right Arrows` |
 | **Clear Annotations** | Flushes all predicted masks from the current frame to the end ($t \to \infty$). | `C` |
 | **Export Annotations** | Saves the session and generates RLE masks and Kinematic JSON data. | `Ctrl + S` |
+| **Taxonomy Sidebar** | Adds a **Positive Prompt** to include a region within the mask. | `Index number of the particular tool` |
+| **Frame Steppers** | Navigates the video timeline frame-by-frame for precise verification. | `Left / Right Arrows` |
 
 ---
 

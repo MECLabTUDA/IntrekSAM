@@ -3,6 +3,26 @@
 # LEARNING CURVE
 </div>
 
+This guide provides the standard operating procedure for generating high-fidelity ground truth masks using IntrekSAM. Follow these phases to ensure temporal consistency and physical accuracy across your datasets.
+
+---
+
+## 🛠 Interface & Shortcut Reference
+
+| Button / Action | Function | Keyboard Shortcut |
+| :--- | :--- | :--- |
+| **Load Auto** | Automatically fetches the next unannotated sequence from the dataset queue. | N/A |
+| **Load Video / Frames** | Manual ingestion of a video file or a directory of extracted image frames. | N/A |
+| **Left-Click** | Adds a **Positive Prompt** to include a region within the mask. | `Mouse 1` |
+| **Right-Click** | Adds a **Negative Prompt** to exclude reflections, noise, or background. | `Mouse 2` |
+| **Undo Points** | Removes the most recently placed prompt on the current frame. | `Ctrl + Z` |
+| **Play / Pause** | Toggles the SAM 2 propagation engine to start or stop tracking. | `Space` |
+| **Frame Scrubbing** | Navigates the video timeline frame-by-frame for precise verification. | `Left / Right Arrows` |
+| **Clear Annotations** | Flushes all predicted masks from the current frame to the end ($t \to \infty$). | `C` |
+| **Export Annotations** | Saves the session and generates RLE masks and Kinematic JSON data. | `Ctrl + S` |
+
+---
+
 <img src="asset/flow_chart.png" width="1000">
 
 ## Annotation Guide: Standard Operating Procedure

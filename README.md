@@ -47,8 +47,17 @@ ffmpeg -i "VIDEO_PATH" -qscale:v 1 -vf "fps=8,scale=512:288:flags=lanczos,setsar
 ```
 
 
-## 📈 Learning Curve (Coming Soon! - Instuctions on How to Use)
-![Demo Video](./asset/demo.gif)
+## 📈 Learning Curve ([Instructions](HOWTO.md))
+ > <details>
+ > <summary><b>▶️ CLICK HERE TO WATCH:</b> <i>Demo Video</i></summary>
+ > <br>
+ > <div align="left">
+ >   <video src="https://github.com/user-attachments/assets/b43e5877-3437-4eff-a9a2-3f64ebb466a8" controls width="100%">
+ >   </video>
+ > </div>
+ > </details>
+
+
 
 ## 📜 Citations
 If you are using IntrekSAM to annotate your video, please cite the following two papers:

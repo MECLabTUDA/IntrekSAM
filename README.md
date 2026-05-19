@@ -62,6 +62,13 @@ ffmpeg -i "VIDEO_PATH" -qscale:v 1 -vf "fps=8,scale=512:288:flags=lanczos,setsar
 ## 📜 Citations
 If you are using IntrekSAM to annotate your video, please cite the following two papers:
 ```
+@article{sivakumar2026swomo,
+  title={SWoMo: Neuro-Symbolic World Model for Cataract Surgery Simulation},
+  author={Sivakumar, Ssharvien Kumar and Johnson, Akwele and Dhingra, Anirudh and Frisch, Yannik and Ghazaei, Ghazal and Mukhopadhyay, Anirban},
+  journal={arXiv preprint arXiv:2605.16530},
+  year={2026}
+}
+
 @article{sivakumar2025sasvi,
   title={SASVi: segment any surgical video},
   author={Sivakumar, Ssharvien Kumar and Frisch, Yannik and Ranem, Amin and Mukhopadhyay, Anirban},
@@ -69,14 +76,5 @@ If you are using IntrekSAM to annotate your video, please cite the following two
   pages={1--11},
   year={2025},
   publisher={Springer}
-}
-
-@inproceedings{sivakumar2025sg2vid,
-  title={Sg2vid: Scene graphs enable fine-grained control for video synthesis},
-  author={Sivakumar, Ssharvien Kumar and Frisch, Yannik and Ghazaei, Ghazal and Mukhopadhyay, Anirban},
-  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
-  pages={511--521},
-  year={2025},
-  organization={Springer}
 }
 ```

@@ -6,7 +6,7 @@
 
 
 ## 💡Key Features
-IntrekSAM is an interactive SAM2-based video segmentation annotation tool. To our knowledge, no existing SAM2-based interface for video segmentation annotation simultaneously provides the following: free and open-source access, easy setup, local deployment, easy customization, and multi-class segmentation support. 
+IntrekSAM is an interactive SAM2-based video segmentation annotation tool used in [SWoMo](https://ssharvienkumar.github.io/SWoMo/). To our knowledge, no existing SAM2-based interface for video segmentation annotation simultaneously provides the following: free and open-source access, easy setup, local deployment, easy customization, and multi-class segmentation support. 
 
 Therefore, we rewrote the graphical interface in Python while retaining the original SAM2 backend. Our tool addresses all the requirements mentioned above and is designed to be easily modified for different use cases. This tool makes it easier to annotate video with jsut few prompt points!
 

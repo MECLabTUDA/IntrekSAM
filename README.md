@@ -47,7 +47,7 @@ ffmpeg -i "VIDEO_PATH" -qscale:v 1 -vf "fps=8,scale=512:288:flags=lanczos,setsar
 ```
 
 
-## 📈 Learning Curve ([Instructions](HOWTO.md))
+## 📈 Learning Curve ([Instructions](INSTRUCTIONS.md))
  > <details>
  > <summary><b>▶️ CLICK HERE TO WATCH:</b> <i>Demo Video</i></summary>
  > <br>
